@@ -50,10 +50,11 @@ rbac:
   additionalNamespaces:
   - vvp-jobs
 
-### Reduce gateway container memory requests.
-gateway:
+appmanager:
   resources:
     limits:
-      memory: 1Gi
-    requests:
-      memory: 1Gi
+      memory: 2Gi
+
+acceptCommunityEditionLicense: true
+persistentVolume:
+  storageClass: directpv-min-io
